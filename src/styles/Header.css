@@ -1,0 +1,52 @@
+/* src/styles/Header.css */
+
+.header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* 로고와 내비게이션 그룹을 양 끝으로 배치 */
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+  margin: 0; /* h1 기본 마진 제거 */
+}
+
+/* 🚀 내비게이션 링크들을 감싸는 nav 태그에 Flexbox 적용 */
+.header-nav {
+  display: flex; /* 자식 요소들을 가로로 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 20px; /* 각 링크/버튼 사이의 간격 */
+}
+
+/* header-nav 내의 링크와 버튼에 공통으로 적용될 스타일 */
+.header-link,
+.header-auth-button {
+  color: white; /* 기본 링크 색상 */
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 8px 15px; /* 클릭 영역 확보 */
+  border-radius: 5px; /* 약간 둥근 모서리 */
+  transition: background-color 0.3s ease; /* 호버 효과를 위한 전환 */
+}
+
+.header-link:hover,
+.header-auth-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* 호버 시 배경색 변경 */
+}
+
+/* 로그인/회원가입 버튼에만 적용될 스타일 (배경색 변경) */
+.header-auth-button {
+  background-color: #61dafb; /* React 로고 색상 */
+  color: #282c34; /* 글자색 */
+  border: none;
+  cursor: pointer;
+}
+
+/* 로그인/회원가입 버튼 호버 시 스타일 */
+.header-auth-button:hover {
+  background-color: #4dcfff; /* 좀 더 밝은 색으로 변경 */
+}
