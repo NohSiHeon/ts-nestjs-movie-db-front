@@ -30,7 +30,6 @@ function LoginPage(){
 		try {
 			const response = await signIn(email, password);
 
-			console.log('로그인 성공', response);
 			setMessage('로그인에 성공했습니다.');
 
 			login(response.accessToken);
