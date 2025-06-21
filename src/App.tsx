@@ -7,6 +7,8 @@ import Header from './components/layouts/Header'
 import HomePage from './components/pages/HomePage'
 import RegisterPage from './components/pages/RegisterPage'
 import LoginPage from './components/pages/LoginPage'
+import MoviesListPage from './components/pages/MoviesListPage'
+import MovieDetailPage from './components/pages/MovieDetailPage'
 
 function App() {
 	return (
@@ -20,6 +22,8 @@ function App() {
 						<Route path='/' element={<HomePage />} />
 						<Route path='/auth/sign-up' element={<RegisterPage />}/>
 						<Route path='/auth/sign-in' element={<LoginPage />}/>
+						<Route path='/movies' element={<MoviesListPage />} />
+						<Route path='/movies/:id' element={<MovieDetailPage />}/>
 					</Routes>
 				</main>
 			</div>
