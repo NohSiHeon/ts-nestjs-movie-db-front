@@ -13,7 +13,12 @@ function HomePage(){
 				setLoading(true);
 				setError(null);
 
-				const moviesData = await getMovies();
+				const moviesData = await getMovies({
+					cursor: null,
+					page: 1,
+					limit: 5,
+					sort: 'desc'
+				});
 
 				if(moviesData){
 					setMovies(moviesData);

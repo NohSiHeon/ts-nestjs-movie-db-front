@@ -1,0 +1,78 @@
+/* MoviesListPage.css */
+
+.movies-list-page {
+	padding: 20px;
+	max-width: 960px;
+	margin: 20px auto;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movies-list-page h2 {
+	color: #333;
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 2.5em;
+	border-bottom: 2px solid #eee;
+	padding-bottom: 10px;
+}
+
+.movies-list {
+	list-style: none; /* 목록 마커 제거 */
+	padding: 0;
+	margin: 0;
+	display: grid; /* 그리드 레이아웃 사용 */
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 반응형 컬럼 */
+	gap: 20px; /* 아이템 간 간격 */
+}
+
+.movie-item {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; /* 내용이 위아래로 고르게 분포되도록 */
+}
+
+.movie-item:hover {
+	transform: translateY(-5px); /* 호버 시 약간 위로 뜨는 효과 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.movie-item h3 {
+	color: #0056b3;
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 1.5em;
+	word-break: break-word; /* 긴 제목이 넘치지 않도록 */
+}
+
+.movie-item p {
+	color: #555;
+	font-size: 0.95em;
+	line-height: 1.5;
+	margin-bottom: 8px;
+}
+
+.movie-item p:last-of-type {
+	margin-bottom: 0;
+}
+
+/* 로딩 및 에러 메시지 스타일 */
+.movies-list-page > div { /* 로딩/에러 메시지를 감싸는 div에 적용 */
+	text-align: center;
+	font-size: 1.2em;
+	color: #666;
+	padding: 50px 20px;
+}
+
+.movies-list-page > div[style*="color: red"],
+.movies-list-page > div[style*="오류"] { /* 오류 메시지에 빨간색 적용 (임시 방편) */
+	color: #d9534f; /* Bootstrap's danger red */
+	font-weight: bold;
+}
